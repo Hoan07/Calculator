@@ -1,13 +1,13 @@
 html, body {
-  background-color:#5D6170;
   height:100%;
-  margin:0;
   overflow-x: hidden;
   overflow-y: hidden;
+  
 }
 
 .cover {
   height: 100%;
+  background-color:#5D6170;
 }
 
 .title {
@@ -22,11 +22,16 @@ html, body {
   height: 70%
 }
 
+.press col, btn {
+  height: 100%;
+}
 .vertical-align {
   display: flex;
   align-items: center;
 }
 
-.btn {
-  margin: 10px;
+.btn-block {
+  border-width: 5px;
+  border-color: white;
+  height:100%;
 }
