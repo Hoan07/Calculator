@@ -1,0 +1,32 @@
+html, body {
+  background-color:#5D6170;
+  height:100%;
+  margin:0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.cover {
+  height: 100%;
+}
+
+.title {
+  height: 10%;
+  display: flex;
+  align-items:center
+}
+.display {
+  height: 20%
+}
+.press {
+  height: 70%
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  margin: 10px;
+}
