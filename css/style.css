@@ -2,36 +2,41 @@ html, body {
   height:100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  
+  font-size: calc(1.5vh + 1vw);
 }
 
 .cover {
   height: 100%;
-  background-color:#5D6170;
+  background-color:#5D6170
 }
 
 .title {
   height: 10%;
   display: flex;
-  align-items:center
+  align-items:center;
+  font-size: 1.2em;
 }
 .display {
-  height: 20%
-}
-.press {
-  height: 70%
+  height: 10%;
+  font-size: 1.2em;
+  background-color: #4C87B8;
 }
 
-.press col, btn {
+.press {
+  height: 80%;
+  font-size: 1em;
+}
+
+.press .col{
   height: 100%;
+}
+.press .btn {
+  height: 100%;
+  border-width: 1px;
+  border-color: white;
+  border-radius: 0;
 }
 .vertical-align {
   display: flex;
-  align-items: center;
-}
-
-.btn-block {
-  border-width: 5px;
-  border-color: white;
-  height:100%;
+  align-items: center
 }
