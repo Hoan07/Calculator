@@ -2,7 +2,7 @@ html, body {
   height:100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  font-size: calc(1.5vh + 1vw);
+  font-size: 5vh;
 }
 
 .cover {
@@ -17,14 +17,14 @@ html, body {
   font-size: 1.2em;
 }
 .display {
-  height: 10%;
+  height: 20%;
   font-size: 1.2em;
   background-color: #4C87B8;
 }
 
 .press {
-  height: 80%;
-  font-size: 1em;
+  height: 70%;
+  font-size: 4em;
 }
 
 .press .col{

@@ -23,15 +23,15 @@
           </div>
         </div>
         <div class="row display text-right">
-          <div class="col">
+          <div style="margin-right: 1%" class="col">
             <div style="height: 50%" class="row">
               <div class="col">
-                <p style="color:white; font-size: 1.2em">0</p>
+                <p id="inputTxt" style="color:white; font-size: 1.2em">0</p>
               </div>
             </div>
             <div style="height: 50%" class="row">
               <div class="col">
-                <p style="color:#BDA5A5; font-size: 0.8em">0</p>
+                <p id="hisTxt" style="color:#BDA5A5; font-size: 0.8em">0</p>
               </div>
             </div>
           </div>
@@ -40,59 +40,59 @@
           <div class="col">
             <div style="height: 20%" class="row no-gutters">
               <div class="col">
-                <button class="btn btn-primary btn-block">AC</button>
+                <button class="btn btn-primary btn-block" onclick="buttonClick('AC')">AC</button>
               </div>
               <div class="col">
-                <button class="btn btn-primary btn-block">CE</button>
+                <button class="btn btn-primary btn-block" onclick="buttonClick('CE')">CE</button>
               </div>
               <div class="col">
-                <button class="btn btn-primary btn-block">/</button>
+                <button class="btn btn-primary btn-block" onclick="buttonClick('/')">/</button>
               </div>
               <div class="col">
-                <button class="btn btn-primary btn-block">*</button>
-              </div>
-            </div>
-            <div style="height: 20%" class="row no-gutters">
-              <div class="col">
-                <button class="btn btn-block">7</button>
-              </div>
-              <div class="col">
-                <button class="btn btn-block">8</button>
-              </div>
-              <div class="col">
-                <button class="btn btn-block">9</button>
-              </div>
-              <div class="col">
-                <button class="btn btn-primary btn-block">-</button>
+                <button class="btn btn-primary btn-block" onclick="buttonClick('*')">*</button>
               </div>
             </div>
             <div style="height: 20%" class="row no-gutters">
               <div class="col">
-                <button class="btn btn-block">4</button>
+                <button class="btn btn-block" onclick="buttonClick('7')">7</button>
               </div>
               <div class="col">
-                <button class="btn btn-block">5</button>
+                <button class="btn btn-block" onclick="buttonClick('8')">8</button>
               </div>
               <div class="col">
-                <button class="btn btn-block">6</button>
+                <button class="btn btn-block" onclick="buttonClick('9')">9</button>
               </div>
               <div class="col">
-                <button class="btn btn-primary btn-block">+</button>
+                <button class="btn btn-primary btn-block" onclick="buttonClick('-')">-</button>
+              </div>
+            </div>
+            <div style="height: 20%" class="row no-gutters">
+              <div class="col">
+                <button class="btn btn-block" onclick="buttonClick('4')">4</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-block" onclick="buttonClick('5')">5</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-block" onclick="buttonClick('6')">6</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-primary btn-block" onclick="buttonClick('+')">+</button>
               </div>
             </div>
             <div style="height: 40%" class="row no-gutters">
               <div class="col">
                 <div style="height: 50%" class="row no-gutters">
                   <div class="col">
-                    <button class="btn btn-block">1</button>
+                    <button class="btn btn-block" onclick="buttonClick('1')">1</button>
                   </div>
                   <div class="col">
-                    <button class="btn btn-block">2</button>
+                    <button class="btn btn-block" onclick="buttonClick('2')">2</button>
                   </div>
                 </div>
                 <div style="height: 50%" class="row no-gutters">
                   <div class="col text-center">
-                    <button class="btn btn-block">0</button>
+                    <button class="btn btn-block" onclick="buttonClick('0')">0</button>
                   </div>
                 </div>
               </div>
@@ -101,17 +101,17 @@
                   <div style="height: 100%" class="col">
                     <div style="height: 50%" class="row no-gutters">
                       <div class="col text-center">
-                        <button class="btn btn-block">3</button>
+                        <button class="btn btn-block" onclick="buttonClick('3')">3</button>
                       </div>
                     </div>
                     <div style="height: 50%" class="row no-gutters">
                       <div class="col text-center">
-                        <button class="btn btn-block">.</button>
+                        <button class="btn btn-block" onclick="buttonClick('.')">.</button>
                       </div>
                     </div>
                   </div>
                   <div class="col">
-                    <button class="btn btn-primary btn-block">=</button>
+                    <button class="btn btn-primary btn-block" onclick="buttonClick('=')">=</button>
                   </div>
                 </div>
               </div>
