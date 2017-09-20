@@ -16,56 +16,63 @@ function buttonClick(val) {
     case '=':
       var t = calculation(curTxt).toString();
       $('#inputTxt').text(t);
+      $('#hisTxt').text(t);
       curTxt = [];
       hisTxt = t.split('');
-      $('#hisTxt').text(hisTxt.join(''));
       break;
     default:
       if (curTxt.length === 0) {
         if (val === '+' || val === '-' || val === '*' || val === "/") {
-          curTxt = hisTxt;
+          curTxt = hisTxt.slice();
         }
       }
       curTxt.push(val);
       $('#inputTxt').text(curTxt.join(''));
+      break;
   }
 }
 
 function calculation(arr) {
   var val = 0;
-  var numStr = [[]];
-  var operator = [];
+  var numStr = [];
+  var express = [];
 
   for (var i = 0, n = arr.length; i < n; i++) {
-    if (arr[i] === '+' || arr[i] === '-' || arr[i] === '*' || arr[i] === '/') {
-      operator.push(arr[i]);
-      numStr.push([]);
+    if (arr[i] === '*' || arr[i] === '/') {
+      if (numStr.length !== 0) express.push(parseFloat(numStr.join('')));
+      numStr = [];
+      express.push(arr[i]);
+    } else if (arr[i] === '+' || arr[i] === '-') {
+      if (numStr.length !== 0) express.push(parseFloat(numStr.join('')));
+      numStr = [arr[i]];
     } else {
-      numStr[numStr.length - 1].push(arr[i]);
+      numStr.push(arr[i]);
     }
   }
 
-  numStr[0].length === 0? val = 0: val = parseFloat(numStr[0].join(''));
+  if (numStr.length !== 0) express.push(parseFloat(numStr.join('')));
 
-  for (var j = 0, m = operator.length; j < m; j++) {
-    val = compute(val, operator[j], parseFloat(numStr[j + 1].join('')));
-  }
-
-  return val;
+  return evalExpress(express);
 }
 
-function compute(val1, op, val2) {
-  switch (op) {
-    case '+':
-      return val1 + val2;
-    case '-':
-      return val1 - val2;
-    case '*':
-      return val1 * val2;
-    case '/':
-      return val1 / val2;
-    default:
-      return 0;
+function evalExpress(arr) {
+  var ex;
+  var i, n;
+  var re = 0;
+  for (i = 0, n = arr.length; i < n; i++) {
+    if (arr[i] === '*') {
+      ex = arr.splice(i-1,3);
+      arr.splice(i-1,0,ex[0] * ex[2]);
+    }
+    if (arr[i] === '/') {
+      ex = arr.splice(i-1,3);
+      arr.splice(i-1,0,ex[0] / ex[2]);
+    }
   }
-  return 0;
+
+  for (i = 0, n = arr.length; i < n; i++) {
+    re += arr[i];
+  }
+
+  return re;
 }

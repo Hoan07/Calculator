@@ -1,5 +1,6 @@
 html, body {
-  height:100%;
+  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   font-size: 5vh;
@@ -15,6 +16,7 @@ html, body {
   display: flex;
   align-items:center;
   font-size: 1.2em;
+  margin-top: 0.2em;
 }
 .display {
   height: 20%;
