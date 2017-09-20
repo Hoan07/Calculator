@@ -1,10 +1,6 @@
 var hisTxt = [];
 var curTxt = [];
 
-function iniLoad() {
-  window.scrollTo(0,document.body.scrollHeight);
-}
-
 function buttonClick(val) {
   switch (val) {
     case 'AC':
