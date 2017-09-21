@@ -1,9 +1,8 @@
 html, body {
-  height: 100vh;
-  min-height: 100vh;
+  height:100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  font-size: 5vh;
+  font-size: calc(2vh + 1vw);
 }
 
 .cover {
@@ -16,11 +15,10 @@ html, body {
   display: flex;
   align-items:center;
   font-size: 1.2em;
-  margin-top: 0.2em;
 }
 .display {
   height: 20%;
-  font-size: 1.2em;
+  font-size: 2em;
   background-color: #4C87B8;
 }
 
@@ -29,16 +27,37 @@ html, body {
   font-size: 4em;
 }
 
-.press .col{
-  height: 100%;
-}
 .press .btn {
   height: 100%;
   border-width: 1px;
   border-color: white;
   border-radius: 0;
 }
-.vertical-align {
-  display: flex;
-  align-items: center
+
+.col0 {
+  margin-left: 0.05em;
+  margin-right: 0.05em;
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
+}
+
+.col0 > .row {
+  padding-top: 0.05em; padding-bottom: 0.05em; padding-left: 0.05em; padding-right: 0.05em
+}
+
+.rowN {
+
+}
+
+.rowN > .col {
+  padding-left: 0.05em;
+  padding-right: 0.05em;
+}
+
+.col00 {
+
+}
+
+.col00 > .row {
+  padding-top: 0.05em; padding-bottom: 0.05em; padding-left: 0.05em; padding-right: 0.05em
 }
